@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="cv.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>Curriculum vitae</title>
+</head>
+<body :class="{no-scroll: hamburgerMenu === true}">
+    <div id="app" :class="{active: hamburgerMenu === true}">
+            <div class="mobiel-menu" :class="{change: hamburgerMenu === true, active: hamburgerMenu === true, inactive: hamburgerMenu === false}">
+                <p>Yentl Vanderwaeren</p>
+                    <div class="hamburger-menu">
+                        <div class="bar1"  @click="openHamburgerMenu"></div>
+                        <div class="bar2"  @click="openHamburgerMenu"></div>
+                        <div class="bar3"  @click="openHamburgerMenu"></div>
+                    </div>
+                    <div class="menu" >
+                        <nav>
+                        <ul v-show="hamburgerMenu" @click="openHamburgerMenu"> 
+                            <a href="#app"><img src="afbeeldingen/home-icon.png" alt="" class="icons"><li>Home</li></a>
+                            <a href="#persoonlijke-gegevens"><img src="afbeeldingen/profile-icon.png" alt="" class="icons"><li>Over mezelf</li></a> 
+                            <a href="#vaardigheden"><img src="afbeeldingen/vaardigheden-icon.png" alt="" class="icons"> <li>Vaardigheden</li></a>
+                            <a href="#opleidingen"><img src="afbeeldingen/opleidingen-icon.png" alt="" class="icons"><li>opleidingen</li></a>
+                            <a href="#contact"><img src="afbeeldingen/telefoon-icon.png" alt="" class="icons"><li>Contact</li></a>
+                        </ul>
+                        </nav>
+                    </div>
+            </div>
+            <div class="overlay">
+            <div class="menu2">
+                <nav>                 
+                <ul>
+                    <p>Yentl Vanderwaeren</p>
+                    <a href="#app"><li>home</li></a>
+                    <a href="#persoonlijke-gegevens"><li>over mezelf</li></a> 
+                    <a href="#vaardigheden"><li>vaardigheden</li></a>
+                    <a href="#opleidingen"><li>opleidingen</li></a>
+                    <a href="#contact"><li>contact</li></a>
+                </ul>
+            </nav>
+            </div>
+        <div class="intro">
+            <div class="overlay">
+            <div class="profiel">
+                <p>Yentl Vanderwaeren</p>
+                    <span>{{quotes[index]}}</span>
+            </div>
+        </div>
+        </div>                    
+    </div>
+        <div class="persoonlijke-gegevens"  id="persoonlijke-gegevens">
+            <img src="afbeeldingen/profielfoto.jpg" alt="foto van mezelf" id="foto">
+            <article>
+                <h3>Yentl Vanderwaeren</h3>
+                Hallo, ik ben Yentl, ik ben 21 jaar en mijn interesses zijn gamen, fitness, piano spelen en op stap gaan met vrienden of familie. Ik heb deze website gemaakt om mijn skills wat bij te schaven en omdat websites maken gewoon leuk is. 
+                Na mijn secundaire ben ik gestart met een leerkrachtenopleiding LO te Leuven maar na de kerstvakantie vond ik
+                dat deze opleiding toch niets voor mij is. Dus stortte ik mij op <br> mijn andere passie ... computers. Ik ben dan gestart met een opleiding programmeren en webdesign in het Volwassenenonderwijs te Aarschot omdat ik 
+                echter nog geen ervaring had.
+                Ik was al snel verslaafd wanneer mijn eerste site / programma werktte, dus heb ik alle modules afgerond en wil ik een job vinden in deze sector.
+                 <br>
+                 <a href="afbeeldingen/CV Yentl.docx" download>Download CV <img src="afbeeldingen/download.png" alt="" class="download1"> <img src="afbeeldingen/icon (1).png" alt="" class="download2"></a>
+            </article>
+        </div>
+        <div class="opleidingen-en-vaardigheden" id="vaardigheden">
+            <div class="vaardigheden">
+                <h4>Vaardigheden</h4>
+            <div class="inhoud">
+                
+                <div class="C-sharp">
+                    <h5>C-Sharp</h5>                  
+                    <img src="afbeeldingen/C-sharp.png" class="grote-logos" alt="C Sharp">
+                        <ul>
+                            <img src="afbeeldingen/vinkje.png" alt="vinkje" class="vinkje"><li>Microsoft Entity Framework Core</li>
+                            <br>
+                            <img src="afbeeldingen/vinkje.png" alt="vinkje" class="vinkje"><li>Databanken</li>
+                            <br>
+                            <img src="afbeeldingen/vinkje.png" alt="vinkje" class="vinkje"><li>Windows Forms</li>
+                        </ul>
+                        <div class="pijltjes">
+                        </div>
+                </div>
+                <div class="html-en-css">
+                    <h5>HTML en CSS</h5>
+                    <img src="afbeeldingen/HTML-CSS.png" class="grote-logos" alt="HTML en CSS ">
+                    <ul>
+                        <img src="afbeeldingen/vinkje.png" alt="vinkje" class="vinkje"><li>Responsive webdesign</li>
+                        <br>
+                        <img src="afbeeldingen/vinkje.png" alt="vinkje" class="vinkje"><li>Animaties</li>
+                        <br>
+                        <img src="afbeeldingen/vinkje.png" alt="vinkje" class="vinkje"><li>fsedfeszfez</li>
+                    </ul>
+                    <div class="pijltjes">
+                    </div>
+                </div>
+                <div class="javascript">
+                    <h5>Javascript</h5>
+                    <img src="afbeeldingen/javascript.png" class="grote-logos" alt="Javascript">
+                    <ul>
+                        <img src="afbeeldingen/vinkje.png" alt="vinkje" class="vinkje"><li>Single Page Application ( SPA )</li>
+                        <br>
+                        <img src="afbeeldingen/vinkje.png" alt="vinkje" class="vinkje"><li>Databanken</li>
+                        <br>
+                        <img src="afbeeldingen/vinkje.png" alt="vinkje" class="vinkje"><li>Vue CLI 3</li>
+                    </ul>
+                 </div>
+            </div>
+            </div>            
+        </div>
+        <!--<div class="opleidingen-en-vaardigheden" id="vaardigheden">
+            <div class="vaardigheden2">
+                <h4>Vaardigheden</h4>
+            <div class="inhoud2">
+                <div class="slider">
+                    <h5>{{slides[vaardigIndex].naam}}</h5>
+                    <img :src="slides[vaardigIndex].afbeelding" alt="" class="grote-logos">
+                    <ul>
+                        <li>{{slides[vaardigIndex].vaardig[0]}}</li>
+                        <br>
+                        <li>{{slides[vaardigIndex].vaardig[1]}}</li>
+                        <br>
+                        <li>{{slides[vaardigIndex].vaardig[2]}}</li>
+                    </ul>
+                </div>
+                <div class="pijltjes">
+                    <img src="afbeeldingen/left-arrow (2).png" alt="" @click="toonVaardigheid">
+                    <img src="afbeeldingen/right-arrow (2).png" alt="" @click="toonVaardigheid">
+                </div>
+            </div>
+            </div>            
+        </div>-->
+        <div class="opleidingen-en-vaardigheden" id="vaardigheden">
+                <div class="vaardigheden2">
+                    <h4>Vaardigheden</h4>
+                <div class="inhoud2">
+                    
+                    <div class="C-sharp" v-show="Csharp" :class="{actief: Csharp === true}">
+                        <h5>C-Sharp</h5>                  
+                        <img src="afbeeldingen/C-sharp.png" class="grote-logos" alt="C Sharp">
+                            <ul>
+                                <img src="afbeeldingen/vinkje.png" alt="vinkje" class="vinkje"><li>Microsoft Entity Framework Core</li>
+                                <br>
+                                <img src="afbeeldingen/vinkje.png" alt="vinkje" class="vinkje"><li>Databanken</li>
+                                <br>
+                                <img src="afbeeldingen/vinkje.png" alt="vinkje" class="vinkje"><li>Windows Forms</li>
+                            </ul>
+                            <div class="pijltjes">
+                            </div>
+                    </div>
+                    <div class="html-en-css" v-show="htmlcss" :class="{actief: htmlcss === true}">
+                        <h5>HTML en CSS</h5>
+                        <img src="afbeeldingen/HTML-CSS.png" class="grote-logos" alt="HTML en CSS ">
+                        <ul>
+                            <img src="afbeeldingen/vinkje.png" alt="vinkje" class="vinkje"><li>Responsive webdesign</li>
+                            <br>
+                            <img src="afbeeldingen/vinkje.png" alt="vinkje" class="vinkje"><li>Animaties</li>
+                            <br>
+                            <img src="afbeeldingen/vinkje.png" alt="vinkje" class="vinkje"><li>fsedfeszfez</li>
+                        </ul>
+                        <div class="pijltjes">
+                        </div>
+                    </div>
+                    <div class="javascript" v-show="javascript" :class="{actief: javascript === true}">
+                        <h5>Javascript</h5>
+                        <img src="afbeeldingen/javascript.png" class="grote-logos" alt="Javascript">
+                        <ul>
+                            <img src="afbeeldingen/vinkje.png" alt="vinkje" class="vinkje"><li>Single Page Application ( SPA )</li>
+                            <br>
+                            <img src="afbeeldingen/vinkje.png" alt="vinkje" class="vinkje"><li>Databanken</li>
+                            <br>
+                            <img src="afbeeldingen/vinkje.png" alt="vinkje" class="vinkje"><li>Vue CLI 3</li>
+                        </ul>
+                     </div>
+                     <div class="pijltjes">
+                            <img src="afbeeldingen/left-arrow (2).png" alt="" @click="toonVaardigheid2">
+                            <img src="afbeeldingen/right-arrow (2).png" alt="" @click="toonVaardigheid">
+                    </div>
+                </div>
+                </div>            
+            </div>
+        <div class="opleidingen" id="opleidingen">
+            <div class="opleidingen-inhoud">
+                <h6>Opleidingen</h6>
+                <div class="opleidingen-grid">
+                    <div class="item">
+                        <div class="inhoud-item">
+                        <h1>TSO Lichamelijke opvoeding en sport</h1>
+                        <span>Duur:</span><p>2010 - 2016</p>
+                        <br>
+                        <span>School:</span><p>Atheneum Kamsa</p>
+                        <br>
+                        <span>Plaats:</span><p>Pastoor Dergentlaan 47, 3200 Aarschot </p>
+                    </div>
+                    </div>
+                    <div class="item">
+                        <h1>Programmeren C# 1, 2, 3</h1>
+                        <span>Duur:</span><p>2017 - 2019</p>
+                        <br>
+                        <span>School:</span><p>CVO Hageland Volwassenenonderwijs</p>
+                        <br>
+                        <span>Plaats:</span><p> Bekaflaan 62, 3200 Aarschot</p>
+                    </div>
+                    <div class="item">
+                        <h1>Javascript 1, 2, 3</h1>
+                        <span>Duur:</span><p>2017 - 2019</p>
+                        <br>
+                        <span>School:</span><p>CVO Hageland Volwassenenonderwijs</p>
+                        <br>
+                        <span>Plaats:</span><p> Bekaflaan 62, 3200 Aarschot</p>
+                    </div>
+                    <div class="item">
+                        <h1>HTML en CSS</h1>
+                        <span>Duur:</span><p>2017 - 2018</p>
+                        <br>
+                        <span>School:</span><p>CVO Hageland Volwassenenonderwijs</p>
+                        <br>
+                        <span>Plaats:</span><p> Bekaflaan 62, 3200 Aarschot</p>
+                    </div>
+                    <div class="item">
+                        <h1>Hardware - en software problemen oplossen</h1>
+                        <span>Duur:</span><p>2017 - 2017</p>
+                        <br>
+                        <span>School:</span><p>CVO Hageland Volwassenenonderwijs</p>
+                        <br>
+                        <span>Plaats:</span><p> Bekaflaan 62, 3200 Aarschot</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="footer-inhoud" id="contact">
+                <h1>Contact</h1>
+                    <div class="contact">
+                        <div class="telefoon-gegevens">
+                                <img src="afbeeldingen/telefoon-icon2.png" alt="Een telefoon icoontje" class="contacteer-afbeeldingen">
+                                
+                                <span>04 93 10 95 95</span>
+                        </div>
+                        <div class="email-gegevens">
+                                <img src="afbeeldingen/email-icon.png" alt="een email icoontje" class="contacteer-afbeeldingen">
+                                <span>yentl_19_97@hotmail.com</span>
+                        </div>
+                        <div class="linkedin-gegevens">
+                            <img src="afbeeldingen/linkedIn-icon.png" alt="linked In icoontje">
+                            <span><a href="https://www.linkedin.com/in/yentl-vanderwaeren-99993417b/">mijn LinkedIn</a></span>
+                        </div>
+                    </div>
+                    <h2>© 2019 Yentl Vanderwaeren All Rights Reserved</h2>
+            </div>
+        </div>
+    </div>
+<script>
+    const app = new Vue({
+        el: "#app",
+        data: {
+            index: 0,
+            hamburgerMenu: false,
+            Csharp: true,
+            htmlcss: false,
+            javascript: false,
+            vaardigIndex: 0,
+            slides:[
+                {
+                    naam: "C-Sharp",
+                    afbeelding: "./afbeeldingen/C-sharp.png",
+                    vaardig: ["Microsoft Entity Framework Core", "Databanken", "Windows Forms"]
+                },
+                {
+                    naam: "HTML en CSS",
+                    afbeelding: "./afbeeldingen/HTML-CSS.png",
+                    vaardig: ["Responsive webdesign", "Animaties"]
+                },
+                {
+                    naam: "Javascript",
+                    afbeelding: "./afbeeldingen/javascript.png",
+                    vaardig: ["Single Page Application ( SPA )", "Databanken", "Vue CLI 3"]
+                }
+            ],
+            quotes: [
+                "Web developer","Web designer","Programmeur"
+            ],
+        },
+        methods:{
+            volgende(){
+            if(this.index < this.quotes.length - 1){
+                this.index++;
+            }
+            else{
+                this.index = 0;
+            }
+        },
+        volgende2(){
+            if(this.vaardigIndex < this.slides.length - 1){
+                this.vaardigIndex++;
+            }
+            else{
+                this.vaardigIndex = 0;
+            }
+        },
+        quoteCyclus(){
+                setInterval(this.volgende, 5000);
+            },
+        openHamburgerMenu(){
+            if(this.hamburgerMenu === false){
+                this.hamburgerMenu = true;
+            }
+            else if(this.hamburgerMenu === true){
+                this.hamburgerMenu = false;
+            }
+        },
+        toonVaardigheid(){
+            if(this.Csharp === true){
+                this.Csharp = false;
+                this.htmlcss = true;
+                this.javascript = false;
+            }
+            else if(this.htmlcss === true){
+                this.htmlcss = false;
+                this.javascript = true;
+                this.Csharp = false;
+            }
+            else if(this.javascript === true){
+                this.Csharp = true;
+                this.htmlcss = false;
+                this.javascript = false;
+            }
+        },
+        java(){
+            if(this.javascript === false){
+                this.Csharp = false;
+                this.javascript = true;
+                this.htmlcss = false;
+                this.vaardigIndex = 2;
+            }
+        },
+        CSharp(){
+            if(this.Csharp === false){
+                this.Csharp = true;
+                this.javascript = false;
+                this.htmlcss = false;
+                this.vaardigIndex = 0;
+            }
+        },
+        html(){
+            if(this.htmlcss === false){
+                this.Csharp = false;
+                this.javascript = false;
+                this.htmlcss = true;
+                this.vaardigIndex = 1;
+            }
+        },
+        toonVaardigheid2(){
+            if(this.Csharp === true){
+                this.Csharp = false;
+                this.htmlcss = false;
+                this.javascript = true;
+            }
+            else if(this.htmlcss === true){
+                this.htmlcss = false;
+                this.javascript = false;
+                this.Csharp = true;
+            }
+            else if(this.javascript === true){
+                this.Csharp = false;
+                this.htmlcss = true;
+                this.javascript = false;
+            }
+        },
+    },
+    created: function(){
+        this.quoteCyclus();
+    }
+    })
+</script>
+</body>
+</html>

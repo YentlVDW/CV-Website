@@ -1,0 +1,750 @@
+
+html{
+    scroll-behavior: smooth;
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-size: 10px;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.menu, .menu2{
+    position: fixed;
+    align-items: center;
+    width: 100%;
+    color: #fff;
+    box-shadow: 5px;
+    z-index: 1;
+}
+.menu ul , .menu2 ul{
+    list-style-type: none;
+    padding: 0;
+    overflow: hidden;
+    box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: flex-end;
+    align-items: center;
+    height: 6rem;
+}
+.menu2 ul a{
+    text-decoration: none;
+    margin: 0 3.5rem;
+}
+.menu2 a:after {
+    content: '';
+    display: block;
+    height: 4px;
+    width: 0px;
+    background: transparent;
+    transition: width .3s ease, background-color .3s ease;
+}
+.menu2 a:hover:after {
+    width: 100%;
+    background: red;
+}
+.menu li , .menu2 li{
+    color: white;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    transition: color 0.5s;
+}
+.menu li:hover , .menu2 a:hover{
+    background-size: 100% 5px, auto;
+}
+.menu2 a:focus{
+    transform: scale(1.3);
+}
+.menu p , .menu2 p{
+    text-align: left;
+    color: white;
+    margin-right: auto;
+    font-weight: bold;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    margin-left: 30px;
+}
+.overlay{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+.intro{
+    background: url("afbeeldingen/achtergrond5.jpg") no-repeat;
+    height: 100vh;
+    background-size: 100% 100%;
+    background-position: center;
+}
+.profiel{
+    z-index: 0;
+    top: 60%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    color: white;
+    font-size: 3.0rem;
+    text-align: center;
+    
+}
+.profiel p{
+    font-size: 6.0rem;
+    font-weight: bold;
+    animation: fadeIn 1s ease-in;
+        white-space: nowrap;
+}
+.profiel span{
+    font-size: 4.5rem;
+    width: 0%;
+  white-space: nowrap;
+  letter-spacing: 6px;
+  animation: rightFadeInOut infinite;
+    animation-duration: 5s;
+}
+@keyframes fadeInSpan{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+@keyframes rightFadeInOut {
+    0% {
+      opacity: 0;
+    }
+  
+    75% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+}
+@keyframes verschijnen2{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+@keyframes verschijnen{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+@keyframes bewegen{
+    from {
+    opacity: 1;
+    }
+    to {
+    opacity: 0;}
+    }
+.persoonlijke-gegevens{
+    width: 50%;
+    margin: 100px auto;
+    display: flex;
+    text-align: center;
+}
+.persoonlijke-gegevens h1{
+    font-size: 2.5rem;
+    color: rgba(0, 0, 0, 0.733);
+}
+.persoonlijke-gegevens article{
+    padding: 10px 12px;
+    font-size: 1.3rem;
+    text-align: center;
+    margin-bottom: 30px;
+}
+h3{
+    font-size: 2.0rem;
+    text-align: left;
+}
+h2{
+    text-align: center;
+    font-size: 2.5rem;
+}
+#foto{
+    margin-right: 80px;
+}
+.download2{
+    display: none;
+}
+article a{
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    padding: 10px 12px;
+    display: inline-block;
+    margin: 25px 100px;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    border: solid 1px black;
+    background: linear-gradient(to right, white 50%, #252323 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: all .3s ease-out;
+}
+article a:hover {
+    background-position: left bottom;
+    color: black;
+}
+article a:hover .download2 {
+      display: unset;
+
+}
+article a:hover .download1{
+    display: none;
+}
+.opleidingen-en-vaardigheden{
+    background: url("afbeeldingen/achtergrond2.jpg") no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+.opleidingen-en-vaardigheden h4{
+    font-size: 2.5rem;
+    color: white;
+    text-align: center;
+    padding-top: 20px;
+    text-transform: uppercase;
+}
+.vaardigheden, .vaardigheden2{
+    background-color: rgba(0, 0, 0, 0.8);
+}
+.vaardigheden2{
+    display: none;
+}
+.inhoud{
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.inhoud li{
+    list-style-type: none;
+    color: white;
+    font-size: 1.5rem;
+    display: inline-block;
+    padding: 10px 10px;
+}
+.C-sharp, .html-en-css, .javascript{
+    text-align: center;
+    width: fit-content;
+    margin-bottom: 40px;
+}
+.pijltjes{
+    display: none;
+}
+.grote-logos{
+    width: 128px;
+    height: 128px;
+}
+.inhoud ul{
+    text-align: left;
+    margin-top: 30px;
+}
+.vinkje{
+    margin-right: 20px;
+    margin-top: 10px;
+}
+h5{
+    color: white;
+    font-size: 1.5rem;
+}
+.opleidingen-inhoud h6{
+    text-align: center;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    color: black;
+}
+.opleidingen{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f9f9f9;
+
+}
+.opleidingen-grid{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    column-gap: 8rem;
+    row-gap: 5rem;
+    justify-content: center;
+}
+.item{
+    transition: all .3s ease-in-out;
+}
+.item:hover{
+    transform: scale(1.1);
+}
+.item, .laatste-item{
+    box-shadow: 5px 10px 18px 5px #888888;
+}
+.item span, .laatste-item span{
+    margin-right: 10px;
+    font-weight: bold;
+    font-size: 1.4rem;
+    margin-left: 8px;
+}
+.item h1, .laatste-item h1{
+    font-size: 1.3rem;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.822);
+    padding: 5px 12px;
+    margin-top: 0;
+}
+.item p, .laatste-item p{
+    font-size: 1.3rem;
+    display: inline-block;
+}
+.item h2, .laatste-item h2{
+    font-weight: 1.3rem;
+}
+.footer-inhoud{
+    background-color: rgba(0, 0, 0, 0.9);
+    text-align: center;
+    color: white;
+}
+.footer-inhoud h1{
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: 20px;
+    font-size: 2.5rem;
+}
+.footer-inhoud a{
+    color: white;
+}
+.footer-inhoud{
+    font-size: 1.3rem;
+}
+.footer{
+    height: 12rem;
+    margin-top: 50px;
+}
+.footer-inhoud h2{
+    background: rgba(0, 0, 0, 0.404);
+    font-size: 1.2rem;
+    margin: 0;
+}
+.contact{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 25px;
+}
+.contact img{
+    margin-bottom: 10px;
+    transition: 0.3s ease-in-out;
+}
+.email-gegevens:hover img, .telefoon-gegevens:hover img, .linkedin-gegevens:hover img{
+    transform: rotate(-15deg);
+}
+.contact span{
+    display: block;
+}
+.mobiel-menu{
+    display: none;
+    width: 100%;
+    background-color: black;
+    color: white;
+    text-align: right;
+    box-sizing: border-box;
+}
+.bar1,.bar2,.bar3{
+    width: 35px;
+    height: 5px;
+    background-color: white;
+    margin: 6px 0;
+    transition: 0.4s ease;
+}
+.change .bar1{
+    transform: rotate(-45deg) translate(-9px,6px);
+}
+.change .bar2{
+    opacity: 0;
+}
+.change .bar3{
+    transform: rotate(45deg) translate(-8px,-8px);
+}
+@media only screen and (max-width: 1000px) {
+    .mobiel-menu{
+        display: block;
+        z-index: 1;
+    }
+    .mobiel-menu p{
+        text-align: right;
+        color: white;
+        padding: 6px 8px;
+        float: right;
+        margin-right: 10px;
+        font-weight: normal;
+        font-size: 1.3rem;
+        text-transform: uppercase;
+    }
+    .hamburger-menu{
+        padding: 20px 15px;
+    }
+    .menu ul{
+        display: unset;
+    }
+    .menu2{
+        display: none;
+    }
+    .menu ul li{
+        display: block;
+        white-space: nowrap;
+        float: none;
+        font-size: 1.3rem;
+        color: white;
+        text-align: left;
+        font-weight: normal;
+        padding: 15px 10px;
+        border-bottom: 1px solid rgba(0, 0, 0, .5);
+        margin: 0;
+    }
+    .menu li:hover{
+        transform-origin: left;
+        transform: none;
+        color: rgba(255, 0, 0, 0.938);
+        cursor: pointer;
+    }
+    .menu a{
+        text-decoration: none;
+    }
+    .profiel{
+        top: 55%;
+    }
+    .menu{
+        position: fixed;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        width: 0;
+    }
+    .active .menu{
+        display: block;
+        width: 45%;
+        transition: 0.4s ease; 
+    }
+    .inactive .menu{
+        width: 0%;
+        transition: 0.4s ease;
+    }
+    .icons{
+        float: left;
+        padding: 10px;
+    }
+    .profiel p{
+        font-size: 3rem;
+    }
+    .profiel span{
+        font-size: 2rem;
+    }
+    .persoonlijke-gegevens{
+        width: 100%;
+        margin: 30px auto;
+        display: block;
+        text-align: center;
+    }
+    .persoonlijke-gegevens h1{
+        font-size: 2.5rem;
+        color: rgba(0, 0, 0, 0.733);
+    }
+    .persoonlijke-gegevens h3{
+        text-align: center;
+    }
+    .persoonlijke-gegevens article{
+        padding: 10px 12px;
+        font-size: 1.3rem;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    .persoonlijke-gegevens article img{
+        margin-left: 5px;
+    }
+    #foto{
+        max-width: 60%;
+        margin-right: 0;
+    }
+    article a{
+        font-size: 1.3rem;
+        text-transform: uppercase;
+        background-color: rgba(0, 0, 0, 0.733);
+        padding: 10px 12px;
+        position: unset;
+        text-align: center;
+        margin: 15px 0;
+        text-decoration: none;
+        color: white;
+    }
+    .opleidingen{
+        background-color: #f9f9f9;
+        display: block;   
+    }
+    .opleidingen-grid{
+        display: block;
+        width: 100%;
+    }
+    .item, .laatste-item{
+        box-shadow: 5px 10px 18px 5px #888888;
+        margin-bottom: 30px;
+        margin-left: 5px;
+        margin-right: 20px; 
+    }
+    .item span, .laatste-item span{
+        margin-right: 10px;
+        font-weight: bold;
+        font-size: 1.4rem;
+        margin-left: 8px;
+    }
+    .item h1, .laatste-item h1{
+        font-size: 1.3rem;
+        color: white;
+        background-color: rgba(0, 0, 0, 0.822);
+        padding: 5px 12px;
+        margin-top: 0;
+    }
+    .item p, .laatste-item p{
+        font-size: 1.3rem;
+        display: inline-block;
+    }
+    .item h2, .laatste-item h2{
+        font-weight: 1.3rem;
+    }
+
+    .opleidingen-en-vaardigheden{
+        background: url("afbeeldingen/achtergrond2.jpg") no-repeat;
+        background-position: center center;
+        background-size: cover;
+    }
+    .opleidingen-en-vaardigheden h4{
+        margin: auto;
+        font-size: 2.0rem;
+        color: white;
+        text-transform: uppercase;
+    }
+    .footer-inhoud h1{
+        font-size: 2.0rem;
+    }
+    .opleidingen h6{
+        font-size: 2.0rem;
+    }
+    .vaardigheden{
+        display: none;
+    }
+    .inhoud{
+        display: none;
+    }
+    .vaardigheden2{
+        display: block;
+        height: 33rem;
+    }
+    .inhoud2{
+        height: 100%;
+        display: block;
+        text-align: center;
+    }
+    .inhoud2 li{
+        text-align: center;
+        color: white;
+        display: inline-block;
+        font-size: 1.5rem;
+        padding: 10px 10px;
+    }
+    .C-sharp, .html-en-css, .javascript, .slider{
+        text-align: center;
+        width: 100%;
+    }
+    .grote-logos{
+        width: 90px;
+        height: 90px;
+    }
+    .pijltjes{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 35px;
+    }
+    .inhoud2 ul{
+        text-align: center;
+        padding: 0;
+    }
+    .vinkje{
+        display: none;
+        margin-right: 20px;
+        margin-top: 10px;
+    }
+    .profiel{
+        font-size: 1.2rem;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: fit-content;
+    }
+    .inhoud{
+        width: 100%;
+        height: 25rem;
+    }
+    .html-en-css, .C-sharp, .javascript{
+        height: 18rem;
+    }
+    .inhoud input{
+        top: -5px;
+        width: 20px;
+        height: 20px;
+        margin: 0 4px;
+        position: relative;
+        border-radius: 100%;
+        display: inline-block;
+        background-color: rgba(0, 0, 0, 0.6);
+    }
+    .actief , .html-en-css, .C-sharp, .javascript{
+        animation: 0.75s leftFadeIn ease;
+        position: relative;
+        left: 0;
+    }
+    .inhoud input:checked{
+        background: rgba(0, 0, 0, 0.8);
+    }
+    @keyframes leftFadeIn {
+        from{
+            opacity: 0;
+            left: -80px;
+        }
+        to{
+            opacity: 1;
+            left: 0px;
+        }
+    }
+}
+@media screen and (max-width: 1450px){
+    .menu2 p{
+        display: none;
+    }
+}
+@media screen and (max-width: 320px) {
+    .active .menu{
+        width: 100%;
+    }
+    .inhoud li{
+        display: block;
+    }
+    .profiel p{
+        font-size: 2rem;
+    }
+    .profiel span{
+        font-size: 2rem;
+    }
+    .menu ul li{
+        text-align: center;
+    }
+}
+@media screen and (max-width: 425px) {
+    .active .menu{
+        width: 100%;
+    }
+    .inhoud li{
+        display: block; 
+    }
+    .menu ul li{
+        text-align: center;
+    }
+    .profiel p{
+        font-size: 2rem;
+    }
+    .profiel span{
+        font-size: 2rem;
+    }
+    .contact img{
+        margin-top: 20px;
+    }
+    .pijl{
+        display: inline-block;
+    }
+    .inhoud2{
+        width: 100%;
+        height: 25rem;
+    }
+    .slider{
+        height: 18rem;
+    }
+    .actief .slider{
+        animation: 0.75s leftFadeIn ease; 
+        position: relative;
+        left: 0;
+    }
+    .item p {
+        font-size: 1.2rem;
+    }
+    @keyframes leftFadeIn {
+        from{
+            opacity: 0;
+            left: -80px;
+        }
+        to{
+            opacity: 1;
+            left: 0px;
+        }
+    }
+    .contact{
+        display: block;
+    }
+    .contact span{
+        display: inline-block;
+    }
+}
+@media screen and (min-width: 300px) and (max-width: 1380px){
+    .item:hover{
+        transform: none;
+    }
+}
+@media screen and (min-width: 1024px) and (max-width: 1130px){
+    .item{
+        margin-bottom: 30px;
+    }
+    .opleidingen-grid{
+        column-gap: 2.0rem;
+    }
+    .menu2 ul li{
+        font-size: 1.0rem;
+    }
+}
+@media screen and (min-width: 1050px) and (max-width: 1500px){
+    .menu2 li{
+        font-size: 1.3rem;
+    }
+    .menu2 ul{
+        justify-content: space-evenly;
+    }
+}
+@media screen and (min-width: 1024px) and (max-width: 1890px) { 
+    .persoonlijke-gegevens{
+        width: 70%;
+    }
+}
+@media screen and (min-width: 1024px) and (max-width: 1200px) { 
+    .persoonlijke-gegevens{
+        width: unset;
+        margin-left: 40px;
+    }
+}
+@media screen and (max-width: 1200px){
+    .inhoud li{
+        font-size: 1.2rem;
+    }
+}
+
+
