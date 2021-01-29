@@ -5,35 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="cv.css">
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Handlee&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-    <title>Curriculum vitae</title>
+    <title>Curriculum vitae &verbar; Yentl Vanderwaeren</title>
 </head>
-<body :class="{no-scroll: hamburgerMenu === true}">
-    <div id="app" :class="{active: hamburgerMenu === true}">
-            <div class="mobiel-menu" :class="{change: hamburgerMenu === true, active: hamburgerMenu === true, inactive: hamburgerMenu === false}">
-                <p>Yentl Vanderwaeren</p>
-                    <div class="hamburger-menu">
-                        <div class="bar1"  @click="openHamburgerMenu"></div>
-                        <div class="bar2"  @click="openHamburgerMenu"></div>
-                        <div class="bar3"  @click="openHamburgerMenu"></div>
-                    </div>
-                    <div class="menu" >
-                        <nav>
-                        <ul v-show="hamburgerMenu" @click="openHamburgerMenu"> 
-                            <a href="#app"><img src="afbeeldingen/home-icon.png" alt="" class="icons"><li>Home</li></a>
-                            <a href="#persoonlijke-gegevens"><img src="afbeeldingen/profile-icon.png" alt="" class="icons"><li>Over mezelf</li></a> 
-                            <a href="#vaardigheden"><img src="afbeeldingen/vaardigheden-icon.png" alt="" class="icons"> <li>Vaardigheden</li></a>
-                            <a href="#opleidingen"><img src="afbeeldingen/opleidingen-icon.png" alt="" class="icons"><li>opleidingen</li></a>
-                            <a href="#contact"><img src="afbeeldingen/telefoon-icon.png" alt="" class="icons"><li>Contact</li></a>
+<body>
+        <div id="app">
+                    <div class="menu">
+                            <div class="hamburger-menu">
+                                <i class="fas fa-bars" @click="openHamburgerMenu"></i>
+                            </div>
+                    </div> 
+                    <div class="link-menu" :class="{open: hamburgerMenu === true, close: hamburgerMenu === false}">
+                            <i class="fas fa-times" @click="openHamburgerMenu"></i>                 
+                     <nav>                        
+                        <ul> 
+                            <a href="#app" @click="openHamburgerMenu"><img src="afbeeldingen/home-icon.png" alt="" class="icons" ><li>Home</li></a>
+                            <a href="#persoonlijke-gegevens" @click="openHamburgerMenu"><img src="afbeeldingen/profile-icon.png" alt="" class="icons"><li>Over mezelf</li></a> 
+                            <a href="#vaardigheden" @click="openHamburgerMenu"><img src="afbeeldingen/vaardigheden-icon.png" alt="" class="icons"> <li>Vaardigheden</li></a>
+                            <a href="#opleidingen" @click="openHamburgerMenu"><img src="afbeeldingen/opleidingen-icon.png" alt="" class="icons"><li>opleidingen</li></a>
+                            <a href="#contact" @click="openHamburgerMenu"><img src="afbeeldingen/telefoon-icon.png" alt="" class="icons"><li>Contact</li></a>
                         </ul>
-                        </nav>
-                    </div>
-            </div>
-            <div class="overlay">
+                     </nav>
+                    </div>     
             <div class="menu2">
                 <nav>                 
                 <ul>
-                    <p>Yentl Vanderwaeren</p>
+                    <p>Yentl</p>
                     <a href="#app"><li>home</li></a>
                     <a href="#persoonlijke-gegevens"><li>over mezelf</li></a> 
                     <a href="#vaardigheden"><li>vaardigheden</li></a>
@@ -49,35 +59,34 @@
                     <span>{{quotes[index]}}</span>
             </div>
         </div>
-        </div>                    
-    </div>
+        </div>
+        <div class="scrolldown">
+            <a href="#persoonlijke-gegevens"><span></span></a>
+        </div>                
         <div class="persoonlijke-gegevens"  id="persoonlijke-gegevens">
-            <img src="afbeeldingen/profielfoto.jpg" alt="foto van mezelf" id="foto">
-            <article>
+            <img src="afbeeldingen/profielfoto.jpg" alt="foto van mezelf" id="foto" data-aos="fade-right" data-aos-offset="300">
+            <article data-aos="fade-left" data-aos-offset="300">
                 <h3>Yentl Vanderwaeren</h3>
-                Hallo, ik ben Yentl, ik ben 21 jaar en mijn interesses zijn gamen, fitness, piano spelen en op stap gaan met vrienden of familie. Ik heb deze website gemaakt om mijn skills wat bij te schaven en omdat websites maken gewoon leuk is. 
-                Na mijn secundaire ben ik gestart met een leerkrachtenopleiding LO te Leuven maar na de kerstvakantie vond ik
-                dat deze opleiding toch niets voor mij is. Dus stortte ik mij op <br> mijn andere passie ... computers. Ik ben dan gestart met een opleiding programmeren en webdesign in het Volwassenenonderwijs te Aarschot omdat ik 
-                echter nog geen ervaring had.
-                Ik was al snel verslaafd wanneer mijn eerste site / programma werktte, dus heb ik alle modules afgerond en wil ik een job vinden in deze sector.
+                Hallo, ik ben Yentl, ik ben 21 jaar en ik woon in Tielt-Winge. mijn interesses zijn gamen, fitness, muziek en op stap gaan met vrienden of familie.Na mijn secundair onderwijs was het tijd om mijn weg uit te stippelen. Ik wou iets doen dat met computers te maken had,
+                dus ben ik lessen gaan volgen bij CVO Hageland te Aarschot. Ik had mij ingeschreven voor C# omdat het mij wel interressant leek. Na een paar lessen programmeren was ik aangenaam verrast. Het probleemoplossend denken
+                hield mij uren bezig en wanneer mijn project vorm kreeg voelde het alsof ik iets bereikt had en ik had echt zin in meer. Ik heb mij dan ook voor HTML/CSS en Javascript ingeschreven en in die vakken heb ik ook alle modules afgerond.
                  <br>
                  <a href="afbeeldingen/CV Yentl.docx" download>Download CV <img src="afbeeldingen/download.png" alt="" class="download1"> <img src="afbeeldingen/icon (1).png" alt="" class="download2"></a>
             </article>
         </div>
-        <div class="opleidingen-en-vaardigheden" id="vaardigheden">
-            <div class="vaardigheden">
+        <div class="opleidingen-en-vaardigheden">
+            <div class="vaardigheden" id="vaardigheden" >
                 <h4>Vaardigheden</h4>
-            <div class="inhoud">
-                
+            <div class="inhoud" data-aos="fade-right" data-aos-offset="300">         
                 <div class="C-sharp">
-                    <h5>C-Sharp</h5>                  
+                    <h5>C-Sharp</h5>
                     <img src="afbeeldingen/C-sharp.png" class="grote-logos" alt="C Sharp">
                         <ul>
-                            <img src="afbeeldingen/vinkje.png" alt="vinkje" class="vinkje"><li>Microsoft Entity Framework Core</li>
+                            <li>Microsoft Entity Framework Core</li>
                             <br>
-                            <img src="afbeeldingen/vinkje.png" alt="vinkje" class="vinkje"><li>Databanken</li>
+                            <li>Databanken Sqlite</li>
                             <br>
-                            <img src="afbeeldingen/vinkje.png" alt="vinkje" class="vinkje"><li>Windows Forms</li>
+                            <li>Windows Forms</li>
                         </ul>
                         <div class="pijltjes">
                         </div>
@@ -86,11 +95,9 @@
                     <h5>HTML en CSS</h5>
                     <img src="afbeeldingen/HTML-CSS.png" class="grote-logos" alt="HTML en CSS ">
                     <ul>
-                        <img src="afbeeldingen/vinkje.png" alt="vinkje" class="vinkje"><li>Responsive webdesign</li>
+                        <li>Responsive webdesign</li>
                         <br>
-                        <img src="afbeeldingen/vinkje.png" alt="vinkje" class="vinkje"><li>Animaties</li>
-                        <br>
-                        <img src="afbeeldingen/vinkje.png" alt="vinkje" class="vinkje"><li>fsedfeszfez</li>
+                       <li>Animaties</li>
                     </ul>
                     <div class="pijltjes">
                     </div>
@@ -99,11 +106,13 @@
                     <h5>Javascript</h5>
                     <img src="afbeeldingen/javascript.png" class="grote-logos" alt="Javascript">
                     <ul>
-                        <img src="afbeeldingen/vinkje.png" alt="vinkje" class="vinkje"><li>Single Page Application ( SPA )</li>
+                       <li>Single Page Application ( SPA )</li>
                         <br>
-                        <img src="afbeeldingen/vinkje.png" alt="vinkje" class="vinkje"><li>Databanken</li>
+                        <li>Databanken ( Node.js en MongoDB )</li>
                         <br>
-                        <img src="afbeeldingen/vinkje.png" alt="vinkje" class="vinkje"><li>Vue CLI 3</li>
+                        <li>Vue CLI 3</li>
+                        <br>
+                        <li>React.js</li>
                     </ul>
                  </div>
             </div>
@@ -134,17 +143,16 @@
         <div class="opleidingen-en-vaardigheden" id="vaardigheden">
                 <div class="vaardigheden2">
                     <h4>Vaardigheden</h4>
-                <div class="inhoud2">
-                    
+                <div class="inhoud2"  data-aos="fade-right" data-aos-offset="300">                   
                     <div class="C-sharp" v-show="Csharp" :class="{actief: Csharp === true}">
                         <h5>C-Sharp</h5>                  
                         <img src="afbeeldingen/C-sharp.png" class="grote-logos" alt="C Sharp">
                             <ul>
-                                <img src="afbeeldingen/vinkje.png" alt="vinkje" class="vinkje"><li>Microsoft Entity Framework Core</li>
+                                <li>Microsoft Entity Framework Core</li>
                                 <br>
-                                <img src="afbeeldingen/vinkje.png" alt="vinkje" class="vinkje"><li>Databanken</li>
+                                <li>Databanken</li>
                                 <br>
-                                <img src="afbeeldingen/vinkje.png" alt="vinkje" class="vinkje"><li>Windows Forms</li>
+                                <li>Windows Forms</li>
                             </ul>
                             <div class="pijltjes">
                             </div>
@@ -153,29 +161,29 @@
                         <h5>HTML en CSS</h5>
                         <img src="afbeeldingen/HTML-CSS.png" class="grote-logos" alt="HTML en CSS ">
                         <ul>
-                            <img src="afbeeldingen/vinkje.png" alt="vinkje" class="vinkje"><li>Responsive webdesign</li>
+                            <li>Responsive webdesign</li>
                             <br>
-                            <img src="afbeeldingen/vinkje.png" alt="vinkje" class="vinkje"><li>Animaties</li>
-                            <br>
-                            <img src="afbeeldingen/vinkje.png" alt="vinkje" class="vinkje"><li>fsedfeszfez</li>
+                            <li>Animaties</li>
                         </ul>
-                        <div class="pijltjes">
-                        </div>
                     </div>
                     <div class="javascript" v-show="javascript" :class="{actief: javascript === true}">
                         <h5>Javascript</h5>
                         <img src="afbeeldingen/javascript.png" class="grote-logos" alt="Javascript">
                         <ul>
-                            <img src="afbeeldingen/vinkje.png" alt="vinkje" class="vinkje"><li>Single Page Application ( SPA )</li>
+                            <li>Single Page Application ( SPA )</li>
                             <br>
-                            <img src="afbeeldingen/vinkje.png" alt="vinkje" class="vinkje"><li>Databanken</li>
+                            <li>Databanken ( Node.js en MongoDB )</li>
                             <br>
-                            <img src="afbeeldingen/vinkje.png" alt="vinkje" class="vinkje"><li>Vue CLI 3</li>
+                            <li>Vue CLI 3</li>
+                            <br>
+                            <li>React.js</li>
+                            
                         </ul>
                      </div>
-                     <div class="pijltjes">
-                            <img src="afbeeldingen/left-arrow (2).png" alt="" @click="toonVaardigheid2">
-                            <img src="afbeeldingen/right-arrow (2).png" alt="" @click="toonVaardigheid">
+                     <div class="bolletjes">
+                         <div class="bol" @click="CSharp" :class="{actiefbolletje: Csharp === true}"></div>
+                         <div class="bol" @click="html" :class="{actiefbolletje: htmlcss === true}"></div>
+                         <div class="bol" @click="java" :class="{actiefbolletje: javascript === true}"></div>
                     </div>
                 </div>
                 </div>            
@@ -183,7 +191,7 @@
         <div class="opleidingen" id="opleidingen">
             <div class="opleidingen-inhoud">
                 <h6>Opleidingen</h6>
-                <div class="opleidingen-grid">
+                <div class="opleidingen-grid" data-aos="zoom-in-up" data-aos-offset="300">
                     <div class="item">
                         <div class="inhoud-item">
                         <h1>TSO Lichamelijke opvoeding en sport</h1>
@@ -234,8 +242,7 @@
                 <h1>Contact</h1>
                     <div class="contact">
                         <div class="telefoon-gegevens">
-                                <img src="afbeeldingen/telefoon-icon2.png" alt="Een telefoon icoontje" class="contacteer-afbeeldingen">
-                                
+                                <img src="afbeeldingen/telefoon-icon2.png" alt="Een telefoon icoontje" class="contacteer-afbeeldingen">                              
                                 <span>04 93 10 95 95</span>
                         </div>
                         <div class="email-gegevens">
@@ -251,7 +258,9 @@
             </div>
         </div>
     </div>
+</div>
 <script>
+    AOS.init();
     const app = new Vue({
         el: "#app",
         data: {
@@ -279,7 +288,7 @@
                 }
             ],
             quotes: [
-                "Web developer","Web designer","Programmeur"
+                "Web developer","Programmeur"
             ],
         },
         methods:{
@@ -291,40 +300,28 @@
                 this.index = 0;
             }
         },
-        volgende2(){
+        /*volgende2(){
             if(this.vaardigIndex < this.slides.length - 1){
                 this.vaardigIndex++;
             }
             else{
                 this.vaardigIndex = 0;
             }
-        },
+        },*/
         quoteCyclus(){
                 setInterval(this.volgende, 5000);
             },
         openHamburgerMenu(){
-            if(this.hamburgerMenu === false){
+            if(this.hamburgerMenu == false){
                 this.hamburgerMenu = true;
+                document.getElementsByTagName("body")[0].style.left = "30%";
+                document.getElementsByTagName("body")[0].style.position = "relative";
+                document.getElementsByClassName("hamburger-menu")[0].style.display = "none";
             }
-            else if(this.hamburgerMenu === true){
+            else if(this.hamburgerMenu == true){
                 this.hamburgerMenu = false;
-            }
-        },
-        toonVaardigheid(){
-            if(this.Csharp === true){
-                this.Csharp = false;
-                this.htmlcss = true;
-                this.javascript = false;
-            }
-            else if(this.htmlcss === true){
-                this.htmlcss = false;
-                this.javascript = true;
-                this.Csharp = false;
-            }
-            else if(this.javascript === true){
-                this.Csharp = true;
-                this.htmlcss = false;
-                this.javascript = false;
+                document.getElementsByTagName("body")[0].style.left = "0%";
+                document.getElementsByClassName("hamburger-menu")[0].style.display = "block";
             }
         },
         java(){
@@ -351,28 +348,26 @@
                 this.vaardigIndex = 1;
             }
         },
-        toonVaardigheid2(){
-            if(this.Csharp === true){
-                this.Csharp = false;
-                this.htmlcss = false;
-                this.javascript = true;
-            }
-            else if(this.htmlcss === true){
-                this.htmlcss = false;
-                this.javascript = false;
-                this.Csharp = true;
-            }
-            else if(this.javascript === true){
-                this.Csharp = false;
-                this.htmlcss = true;
-                this.javascript = false;
+        sectieAnimaties(){
+            const gescrolt = window.scrollY;
+            
+            if(gescrolt > 0){
+                document.getElementsByClassName("menu2")[0].style.backgroundColor = "rgba(0, 0, 0, 0.8)";
+                document.getElementsByClassName("menu2")[0].style.transition = "1s";
             }
         },
     },
     created: function(){
+        window.addEventListener('scroll', this.sectieAnimaties);
         this.quoteCyclus();
-    }
-    })
+    },
+    })  
+</script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+   AOS.init({
+       duration: 1000
+   });
 </script>
 </body>
 </html>
